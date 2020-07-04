@@ -1,0 +1,19 @@
+<p>pet-component works!</p>
+<h2>Pet profile</h2>
+<label>
+  Pet name:
+  <input type="text" (input)="updateName($event.target.value)">
+  <p>Use 2 way binding
+  <input type="text" [(ngModel)]="petName"></p>
+</label>
+<br >
+<label>
+  Pet image:
+  <input type="text" (change)="updateImage($event.target.value)">
+  <p>Use 2 way binding
+  <input type="url" [(ngModel)]="petImage"></p>
+</label>
+<br >
+
+<h3>Pet name: {{petName}}</h3>
+<img [src]="petImage" style="max-width: 100%">
